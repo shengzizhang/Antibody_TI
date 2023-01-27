@@ -3,7 +3,11 @@ use strict;
 
 use GD::Graph::linespoints;
 use GD::Graph::Data;
-
+if(@ARGV%2>0||@ARGV==0){die "
+Usage: free_energy_calculation.pl 
+no parameter is required. If any lambda window need to be excluded, use '0.11505|0.20634'
+	\n";
+	}
 my @folders=();
 opendir my $dh, "./"
   or die "$0: opendir: $!";
