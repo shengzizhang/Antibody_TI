@@ -13,6 +13,7 @@ Type saturation_mutagenesis.pl without parameters to see options.
 saturation_mutagenesis.pl -pdb ../Data/ example_step1/2BDN.pdb -mut “H25,H26” -o 2BDN -p foldx -c HL,A
 
 saturation_mutagenesis.pl -pdb ../Data/ example_step1/2BDN.pdb -mut “H25,H26” -t 8 -o 2BDN -p rosetta -c HL,A
+
 To run rosetta, a script, cart2.script in the /Data/ example_step1/ folder is required.
 
 Step 2:
