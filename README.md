@@ -23,6 +23,7 @@ pdb4amber -i ../Data/ example_step1/2BDN.pdb --reduce --add-missing-atoms -o tem
 Antibody_TI.pl -lig antibody.pdb -rec receptor.pdb -watlig antibody_WAT.pdb -pos 173 -length_lig1 117 -length_lig 224 -aawt THR -aamt ASP -step 1 -ssfile ./temp_sslink -length_receptor 68
 
 After the TI simulation, change the directory to the free_energy folder.
+
 Free_energy_calculation.pl
 
 
