@@ -6,6 +6,7 @@ Required software:
 FoldX, Rosetta, Torque, Amber v20 or above, python2, perl with modules threads and Cwd, R with ggplot2 module. The absolute paths to these software should be added to the scripts. The pipeline is tested on Linux only.
 
 Step 1:
+
 A pdb file of an antibody/antigen complex or other protein complex is required. An example pdb file is in the Data/example_step1 folder. Water, ion, and other post translation modifications should be removed. For antibody, the heavy and light chains should be labeled H and L in the pdb file.
 
 Type saturation_mutagenesis.pl without parameters to see options.
@@ -17,6 +18,7 @@ saturation_mutagenesis.pl -pdb ../Data/ example_step1/2BDN.pdb -mut â€œH25,H26â€
 To run rosetta, a script, cart2.script in the /Data/ example_step1/ folder is required.
 
 Step 2:
+
 To prepare structures for TI simulation, the original structure should be reprocessed using pdb4amber. Waters should be named WAT. The processed structure should be separated to antibody only and receptor only files. If water from the antibody chain will be included (optional), they need to be removed from the antibody structure and included in a separate file. 
 
 pdb4amber -i ../Data/ example_step1/2BDN.pdb --reduce --add-missing-atoms -o temp.pdb
