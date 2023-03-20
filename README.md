@@ -19,14 +19,16 @@ To run rosetta, a script, cart2.script in the /Data/ example_step1/ folder is re
 
 Step 2:
 
+A list of mutations, either predicted from step 1 or rational design, will be needed.
+
 To prepare structures for TI simulation, the original structure should be reprocessed using pdb4amber. Waters should be named WAT. The processed structure should be separated to antibody only and receptor only files. If water from the antibody chain will be included (optional), they need to be removed from the antibody structure and included in a separate file. 
 
 pdb4amber -i ../Data/ example_step1/2BDN.pdb --reduce --add-missing-atoms -o temp.pdb
 
 Antibody_TI.pl -lig antibody.pdb -rec receptor.pdb -watlig antibody_WAT.pdb -pos 173 -length_lig1 117 -length_lig 224 -aawt THR -aamt ASP -step 1 -ssfile ./temp_sslink -length_receptor 68
 
-After the TI simulation, change the directory to the free_energy folder.
+After the TI simulation, change the directory to the free_energy folder to calculate ddG:
 
-Free_energy_calculation.pl
+perl Free_energy_calculation.pl
 
 
